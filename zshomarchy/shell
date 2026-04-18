@@ -32,6 +32,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Keybindings (Emacs-style - overridden by vi-mode later)
 bindkey -e
 
+# Custom Control+J/K for history
+bindkey "^J" down-line-or-history
+bindkey "^K" up-line-or-history
+
+# Alias vim to nvim
+alias vim='/usr/bin/nvim'
+
 # FZF keybindings (if available)
 if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
   source /usr/share/fzf/key-bindings.zsh
